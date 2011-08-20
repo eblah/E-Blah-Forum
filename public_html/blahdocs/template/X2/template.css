@@ -1,0 +1,521 @@
+/* Default Theme Layout */
+#container {
+	width        : 95%;
+	margin       : auto;
+	padding      : 0;
+	border       : 3px solid #FFBF00;
+	margin-top   : 0;
+	border-top   : 0;
+	margin-bottom: 10px;
+	background   : #FFF;
+}
+
+#copyright {
+	width : 95%;
+	margin: auto;
+}
+
+#title {
+	background      : url('images/top_grad.gif');
+	background-color: #FFF;
+	font-size       : 30px;
+	font-weight     : bold;
+	text-align      : left;
+	padding         : 25px;
+}
+
+#menu-container {
+	border-top       : 1px solid #FFBF00;
+	border-bottom    : 1px solid #FFBF00;
+	background       : url('images/menu.gif');
+	background-color: #FFFBF7;
+}
+
+#content {
+	clear: both;
+	padding: 10px;
+}
+
+#user-info {
+	float       : right;
+	text-align  : left;
+	font-size   : 11px;
+	font-weight : normal;
+	background  : #FFFBF7;
+	padding     : 12px;
+	border      : 1px dotted #FFBF00;
+	border-top  : 0;
+	border-right: 0;
+}
+
+/* Global Table Settings */
+body, table, td {
+	font-family: Verdana, Helvetica, Arial;
+	font-size  : 11px;
+	line-height: 1.3;
+	color      : #1D1F22;
+}
+
+body {
+	background-color: #F1F1F1;
+	margin          : 0;
+	text-align      : center;
+}
+
+html { background-color: #F1F1F1; }
+
+table {
+	margin-left : auto;
+	margin-right: auto;
+}
+
+/*
+   Centering help:
+   http://www.maxdesign.com.au/presentation/center/
+*/
+
+td {
+	text-align: left;
+	word-break: break-all; /* This doesn't work in FF, pt of CSS3 */
+}
+
+img {
+	border: 0;
+}
+
+/* 10.2.5 */
+
+blockquote {
+	border     : 1px #4385DB solid;
+	border-left: 5px #4385DB solid;
+}
+
+blockquote .quoteby {
+	padding      : 10px;
+	border-bottom: 1px #4385DB dotted;
+}
+
+blockquote .quotebody {
+	padding: 10px;
+}
+
+/* 10.2.5 END */
+
+.catdesc {
+	padding    : 4px;
+	line-height: 130%;
+}
+
+.normaltext {
+	font-size      : 11px;
+	text-decoration: none;
+	font-weight    : normal;
+}
+
+.indextitle {
+	font-size  : 20px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.pages {
+	font-weight   : normal !important;
+	font-size     : 9px;
+	line-height   : 1.5;
+	white-space   : nowrap;
+	padding-top   : 4px;
+	padding-bottom: 4px;
+}
+
+.pages a, .pages a:link, .pages a:active, .pages a:visited {
+	padding         : 4px;
+	border          : 1px solid #4385DB;
+	background-color: #F9FBFF;
+	text-decoration : none !important;
+}
+
+.pages a:hover {
+	padding         : 4px;
+	border          : 1px solid #4385DB;
+	background-color: #FCFDFF;
+}
+
+.pages strong {
+	padding         : 4px;
+	border          : 1px solid #4385DB;
+	background-color: #EFF6FF;
+}
+
+.postmenu {
+	font-weight: normal !important;
+}
+
+.indexmenu {
+	font-weight: bold !important;
+	white-space: nowrap;
+}
+
+.menubar {
+	float      : left;
+	height     : 30px;
+	border-left: 1px solid #FFBF00;
+	text-align : center;
+	white-space: nowrap;
+}
+
+.menubar a, .menubar a:link {
+	background      : url('images/menu.gif');
+	float           : left;
+	background-color: #FFFBF7;
+	height          : 30px;
+	text-decoration : none;
+	padding         : 0;
+	line-height     : 2.5;
+	border          : 0;
+	border-right    : 1px solid #FFBF00;
+	padding-left    : 15px;
+	padding-right   : 15px;
+	text-align      : center;
+	white-space     : nowrap;
+}
+
+.menubar a:hover {
+	padding         : 0;
+	border          : 0;
+	padding-left    : 15px;
+	padding-right   : 15px;
+	border-right    : 1px solid #FFBF00;
+	background      : url('images/menu_hover.gif');
+	background-color: #FFBF00;
+	text-align      : center;
+	white-space     : nowrap;
+	text-decoration : none;
+}
+
+.catdesc {
+	padding    : 4px;
+	line-height: 130%;
+}
+
+#membercenter a, #membercenter a:link, #membercenter a:active, #membercenter a:visited {
+	line-height : 2;
+	padding-left: 5px;
+	width       : 100%;
+}
+
+#membercenter a:hover {
+	padding-left   : 2px;
+	border-left    : 3px solid #4385DB;
+	text-decoration: none;
+}
+
+#postbar img {
+	margin: 1px;
+}
+
+#postbar a:hover img {
+	margin    : 0;
+	border    : 1px solid #000;
+	background: #90A9C5;
+}
+
+/* Mini-profile:
+	Fancy --> title and value
+	Plain --> On one line
+	Avatar --> Just the avatar and stats (stars)
+*/
+.fancyprofilet, .fancyprofilev, .plainprofile {
+	padding: 5px;
+}
+
+.avatarprofile {
+	margin     : 10px;
+	line-height: 2.3;
+}
+
+.milastaction {
+	margin-bottom: 3px;
+}
+
+.bilastaction {
+	line-height: 1.8;
+}
+
+/* Date Color */
+.bidate, .midate, .didate {
+	color: #727272;
+}
+
+.loading {
+	background-image : url(/blahdocs/images/loading.gif);
+	background-repeat: no-repeat;
+	width            : 222px;
+	height           : 19px;
+}
+
+.right {
+	text-align: right !important;
+}
+
+.center {
+	text-align: center !important;
+}
+
+.justify {
+	text-align: justify !important;
+}
+
+.vtop {
+	vertical-align: top !important;
+}
+
+.innertable {
+	margin: 0 !important;
+}
+
+.leftimg {
+	float        : left;
+	padding-right: 5px;
+}
+
+.rightimg {
+	float       : right;
+	padding-left: 5px;
+}
+
+.centerimg {
+	vertical-align: middle;
+}
+
+.boardsearch {
+	background    : url(/blahdocs/images/search.png) 3px 4px no-repeat;
+	padding-left  : 19px;
+	padding-top   : 5px;
+	padding-bottom: 5px;
+	width         : 90%;
+}
+
+/* If user has a color, specify the options for that user name to appear here */
+.usercolors {
+	font-weight: bold;
+}
+
+/* Colors */
+.titlebg, .catbg {
+	font-family: Verdana, Helvetica, Arial;
+	font-size  : 12px;
+	color      : #000;
+	font-weight: bold;
+}
+
+.titlebg {
+	background: #C6E0FF;
+	border    : 1px solid #FFF;
+}
+
+.catbg {
+	background: #E0EDFF;
+	border    : 1px solid #FFF;
+}
+
+.win {
+	background: #FCFDFF;
+}
+
+.win2 {
+	background: #F9FBFF;
+}
+
+.win3 {
+	background: #EFF6FF;
+}
+
+.win4 {
+	background: #DEE1E5;
+}
+
+.win5 {
+	background: #D3DCE8;
+}
+
+.border, hr {
+	background-color: #4385DB;
+	color           : #4385DB;
+}
+
+hr {
+	height: 1px;
+	border: 0;
+}
+
+/* Board Index Description & Name */
+.bidesc {
+	font-weight: normal;
+	font-size  : 11px;
+	line-height: 1.5;
+	color      : #444 !important;
+}
+
+.boardname {
+	font-weight   : bold;
+	font-size     : 13px;
+	padding-bottom: 2px;
+}
+
+/* Small font text size */
+.smalltext {
+	font-weight: normal;
+	font-size  : 9px;
+	line-height: 1.5;
+}
+
+/* Table alignment */
+div.centered {
+	text-align: center;
+}
+
+div.centered table {
+	margin-left : auto;
+	margin-right: auto; /* long form to make IE5/Mac happy */
+}
+
+.messageseps {
+	border-top: 1px dashed #000;
+	padding   : 5px;
+}
+
+/* Reputation */
+.redrep, .redrep a { /* Bad */
+	color: #FF0033 !important;
+}
+
+.grayrep  { /* Neutral */
+	color: #CCC;
+}
+
+.greenrep, .greenrep a { /* Good */
+	color: #00AF33 !important;
+}
+
+.greenrep, .grayrep, .redrep {
+	font-weight: bold;
+}
+
+/* Bots: this is shown in the "Online" places */
+.onlinebots {
+	color      : gray;
+	font-style : italic;
+	font-weight: normal;
+}
+
+.postbody { /* Format the post body */
+	font-size  : 12px;
+	line-height: 1.5;
+}
+
+/* Poll Colors */
+.pollcolor {
+	background-color: #D3DCE8;
+	padding-left    : 5px;
+	border-right    : 5px solid #4385DB;
+}
+
+
+.pollpercents {
+	background-color: #EFF6FF;
+	color           : #000;
+	padding-right   : 10px;
+	padding-left    : 10px;
+}
+
+.pollborder {
+	background-color: #4385DB;
+	padding         : 1px;
+}
+
+/* Links */
+
+a, a:link, a:active, a:visited {
+	text-decoration: none;
+	color          : #36383B;
+}
+
+a:hover {
+	text-decoration: underline;
+	color          : #1A1016;
+}
+
+/* Forms */
+.upload, input, textarea, select { /* .checkboxinput also allowed */
+	color           : #000;
+	background-color: #F2F6FF;
+	font-family     : Verdana, Helvetica, Times;
+	font-size       : 10px;
+	border          : 1px #4385DB solid;
+	border-width    : 1px;
+}
+
+textarea {
+	padding    : 3px;
+	line-height: 130%;
+}
+
+input {
+	text-indent : 2px;
+	margin      : 0;
+	padding     : 4px;
+}
+
+form, input {
+	margin-top: 0;
+}
+
+form {
+	margin-bottom: 0;
+}
+
+/* Portal Styles */
+.dbx-clone {
+	position  :absolute;
+	visibility:hidden;
+}
+
+.dbx-clone, .dbx-clone .dbx-handle-cursor {
+	cursor: move !important;
+}
+
+.dbx-dummy {
+	display : block;
+	width   : 0;
+	height  : 0;
+	overflow: hidden;
+}
+
+.dbx-group, .dbx-box, .dbx-handle {
+	position: relative;
+	display : block;
+}
+
+#dbx-box {
+	margin : 0;
+	padding: 0;
+	border : none;
+}
+
+/* Calendar */
+.calendarevent { /* Title on the Day view */
+	font-size  : 18px;
+	font-weight: bold;
+}
+
+.currentday { /* These will make the entire day/week kind of faded */
+	opacity: .85;
+	filter : alpha(opacity=85);
+}
+
+/* Tag Clouds */
+a.tag1 { font-size: xx-small; }
+a.tag2 { font-size: small; }
+a.tag3 { font-size: medium; }
+a.tag4 { font-size: large; }
+a.tag5 { font-size: xx-large; }

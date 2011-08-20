@@ -1,0 +1,18 @@
+$reporttxt[3] = 'Could not find the message you have selected to report.';
+$reporttxt[7] = 'Subject';
+$reporttxt[9] = 'Report to';
+$reporttxt[10] = 'All Administrators';
+$reporttxt[11] = 'Reason for Reporting';
+$reporttxt[12] = 'Send Report';
+$reporttxt[14] = 'Report Message to Moderator';
+$reporttxt[17] = 'Selected Message Only';
+$reporttxt[18] = 'Entire Thread';
+$reporttxt[21] = 'All Moderators';
+$reporttxt[22] = 'Moderators and Administrators';
+$reporttxt[25] = 'You must specify a reason before e-mailing the Administrators or Moderators.';
+$reporttxt[26] = 'has reported the following thread to be looked over and reviewed.';
+$reporttxt[27] = 'The user gave the following reason for sending reporting this thread';
+$reporttxt[28] = 'Reporting Thread';
+$reporttxt[44] = 'Please <strong>ONLY</strong> report messages if they are <strong>offensive</strong>, <strong>spam</strong>, or <strong>violate the registration agreement</strong> of this forum.';
+$reporttxt[49] = 'Item to Report';
+1;

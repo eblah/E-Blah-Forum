@@ -1,0 +1,14 @@
+$tagtxt[1] = 'Thread Tag Cloud';
+$tagtxt[2] = 'The top 100 tag words are shown.';
+$tagtxt[3] = 'Search For the Tag';
+$tagtxt[4] = 'Search';
+$tagtxt[5] = 'There were no threads with the tag you specified.';
+$tagtxt[6] = 'Threads Tagged with';
+$tagtxt[7] = 'Subject';
+$tagtxt[8] = 'Replies';
+$tagtxt[9] = 'Author';
+$tagtxt[10] = 'Last Action';
+$tagtxt[11] = 'Board';
+$tagtxt[12] = 'Post by';
+$tagtxt[13] = 'The tag feature is not enabled on this forum.';
+1;

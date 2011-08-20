@@ -1,0 +1,18 @@
+$notify[5] = 'The notification service allows you to receive an email each time someone replies to the threads or boards you add to your notify list.';
+$notify[8] = 'Cannot open the message data file';
+$notify[10] = '<strong>-&#155;</strong> To <strong>add an item</strong>, click "Notify" on the message display or message index page.<br /><strong>-&#155;</strong> To <strong>remove an item</strong>, check the boxes below, and then click "Remove Selected".';
+$notify[11] = 'Threads on your List';
+$notify[12] = 'There are no messages on your notification list.';
+$notify[13] = 'Remove Selected / Change Notification Type';
+$notify[15] = 'Check All';
+$notify[16] = 'Uncheck All';
+$notify[17] = 'Notification Service';
+$notify[19] = 'Boards on your List';
+$notify[20] = 'There are no boards on your notification list.';
+$notify[21] = 'E-mail and Watch';
+$notify[22] = 'Watch Only';
+$notify[23] = 'New Posts';
+$notify[24] = 'Thread';
+$notify[25] = 'Author';
+$notify[26] = 'Notification Type';
+1;

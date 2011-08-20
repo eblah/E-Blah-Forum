@@ -1,0 +1,46 @@
+#########################################
+# Change Log ••••••••••••••••••••• 10.x #
+#########################################
+#                                       #
+#                 Notes                 #
+# This change log may not be complete   #
+# as there may be small features/bug    #
+# features that were undocumented.      #
+#                                       #
+#########################################
+
+---------------------------------------------------------
+ New  / Improved Feature Changes / Cosmetic Enhancements
+---------------------------------------------------------
+10.3.5
+- Attachment Thumbnails can now be rebuilt
+- Reorganized the Search Results page a bit
+- Added RSS Feed to "Latest Forum Activity" (Thanks Hugsville)
+- New smilies (Thanks goes to David for them)
+- Several cosmetic fixes
+- New images abound
+- Added a "Tags" feature for threads, complete with Web 2.0 "Tag Cloud" (be sure to add the tag levels to your CSS template)
+
+------------------------------------------------
+ Bug Fixes / Security Enhancements / Code Fixes
+------------------------------------------------
+10.3.5
+- Hardcoded URL's fixed
+- Various little fixes
+- PM Popup not working, fixed (Thanks Nat)
+- Fixed "stacked menu buttons" (Thanks to Martin for the fix)
+- Fixed a BC bug in Admin/Mailing List (Thanks Sergio)
+- Image resize added to Search results
+- Full message now added to the search results
+- Fixed "all words" search bug (Thanks Don)
+- Fixed a bug with saving PM's to the outbox on a new install/account creation (Thanks Apollo)
+- Administrator validation added Member's List / Groups * Important security fix
+- JavaScript bugs fixed
+- YouTube tag bug fixed (Thanks glen)
+- Fixed a cosmetic bug with the size of the image in the Latest Threads feature (finally)
+- Image directory has been removed of all old images that were no longer in use
+- Several small bugs fixed
+
+-----------------------------------------------------
+
+Copyright (c) 2004-2008 * E-Blah BBS

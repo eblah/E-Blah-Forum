@@ -1,0 +1,17 @@
+$printtxt[1] = 'The topic that you want is not located on this board.';
+$printtxt[2] = 'Cannot open';
+$printtxt[3] = 'Print Topic - Archive';
+$printtxt[6] = 'Poll Data Not Available with Printable Version';
+$printtxt[7] = 'Guest';
+$printtxt[8] = 'Print page generated';
+$printtxt[9] = 'Print Options';
+$printtxt[10] = 'Printer Friendly Version';
+$printtxt[11] = 'This option will give you a simple, printer friendly version, of the topic or message.';
+$printtxt[12] = 'Save to Disk';
+$printtxt[13] = 'Selecting this option will allow you to save this topic or message to your computer.';
+$printtxt[14] = 'There was an error loading the message you tried to access.';
+$printtxt[15] = 'Click here to return to the original view.';
+$printtxt[16] = 'Private Messages';
+$printtxt[17] = 'All Private Messages';
+$printtxt[18] = 'Title';
+1;

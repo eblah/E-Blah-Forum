@@ -1,0 +1,29 @@
+$ltxt[1] = 'Only administrators are allowed to access this section.';
+$ltxt[2] = 'Only administrators and moderators are allowed to access this section.';
+$ltxt[5] = "One of the following errors was encountered while accessing this board ...\n[list][*][b]Problem Verifying your Access to this Board[/b]\nIf this board uses verification, you must use a valid username.\n\n[*][b]Board Data could not be Found or is Corrupt[/b]\nIf you encounter this, contact the system administrator immediately.[/list]";
+$ltxt[7] = 'Moderators';
+$ltxt[10] = 'AIM Screen Name';
+$ltxt[11] = 'Male';
+$ltxt[12] = 'Female';
+$ltxt[19] = 'only location';
+$ltxt[20] = 'No Members';
+$ltxt[23] = 'Your account has been disabled.';
+$ltxt[24] = 'Your account must be validated by';
+$ltxt[25] = 'email before it can be activated.';
+$ltxt[26] = 'an administrator.';
+$ltxt[27] = 'e-mail and an administrator must activate it.';
+$ltxt[41] = 'Location';
+$ltxt[43] = 'days';
+$ltxt[44] = 'You have not validated your password, or your password validation has expired.';
+
+%miniprofile = (
+	'posts'      => 'Posts',
+	'gender'     => 'Gender',
+	'ppd'        => 'Posts Per Day',
+	'reputation' => 'Reputation',
+	'timeon'     => 'Time Online',
+	'location'   => 'Location',
+	'age'        => 'Age',
+	'score'      => 'Reputation Score'
+);
+1;

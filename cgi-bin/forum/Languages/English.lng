@@ -1,0 +1,320 @@
+############################################
+# E-Blah Bulletin Board Systems       2008 #
+############################################
+# Copyright (c) 2001 - 2008 E-Blah         #
+# ---------------------------------------- #
+# Language Pack: English (US)              #
+############################################
+
+$lngversion = '10.3.3';
+$char       = 'UTF-8';  # Character Set to use
+$char2      = '7bit';   # This is for e-mails
+
+# Date format arrays
+@months  = ('January','February','March','April','May','June','July','August','September','October','November','December');
+@days    = ('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+@sdays   = ('Sun','Mon','Tue','Wed','Thu','Fri','Sat');
+@smdlist = ('S','M','T','W','T','F','S');
+@smonths = ('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec');
+
+# Global Texts and Arrays ...
+%gtxt = (
+	0  => 'Guest User',
+	1  => 'Unknown',
+	2  => 'minutes',
+	3  => 'hours',
+	4  => 'users',
+	5  => 'Unique',
+	6  => 'Categories',
+	7  => 'Boards',
+	8  => 'Topics',
+	9  => 'Messages',
+	10 => 'posts',
+	11 => 'messages',
+	12 => 'replies',
+	13 => 'Not Available',
+	14 => 'Downloads',
+	15 => 'Current Location',
+	16 => 'Variables',
+	17 => 'Page',
+	18 => 'IP Address',
+	19 => 'Posted by',
+	20 => 'thread',
+	21 => 'Date Posted',
+	22 => 'Back',
+	23 => 'E-Mail Address',
+	24 => 'Confirm Password',
+	25 => 'Thanks!',
+	26 => 'Okay',
+	27 => 'Hidden',
+	28 => 'e-mail',
+	29 => 'Team Member',
+	30 => 'Online',
+	31 => 'Offline',
+	32 => 'No',
+	33 => 'Yes',
+	34 => 'Posted',
+	35 => 'Posted',
+	36 => 'Author',
+	37 => 'Reply',
+	38 => 'Replies',
+	39 => 'week',
+	40 => 'Month',
+	41 => 'Boards',
+	42 => 'Messages',
+	43 => 'Forum Rules',
+	44 => 'Board Index',
+	45 => 'Pages',
+	46 => 'by',
+	'error'    => 'You are not allowed access to this area.-admin-', # Do not remove -admin-
+	'error2'   => 'Cannot find file',
+	'bfield'   => 'There were blank or invalid fields.',
+	'long'     => 'Your message is too long. Please go back and shorten it.',
+	'noguest'  => 'Guests are not allowed in this area.-register-', # Do not remove -register-
+	'rep'      => 'Reputation',
+	'notfound' => 'The page you are trying to access cannot be found or has been moved.'
+);
+
+# Various
+%var = (
+	0  => 'Default',
+	1  => 'Smiley',
+	2  => 'Thumb Up',
+	3  => 'Thumb Down',
+	4  => 'News',
+	5  => 'Question',
+	6  => 'Lamp',
+	7  => 'X',
+	8  => 'Font',
+	9  => 'Size',
+	10 => 'Bold',
+	11 => 'Italics',
+	12 => 'Underline',
+	13 => 'Left Alignment',
+	14 => 'Center Alignment',
+	15 => 'Right Alignment',
+	16 => 'Pre',
+	17 => 'Strike-out',
+	18 => 'Create List',
+	19 => 'Subscript',
+	20 => 'Superscript',
+	21 => 'URL',
+	22 => 'e-mail',
+	23 => 'Image',
+	24 => 'Quote Text',
+	25 => 'Horizontal Rule',
+	26 => 'Add Upload Link',
+	27 => 'Create Table',
+	28 => 'Create Table Row',
+	29 => 'Create Table Column',
+	30 => 'Color',
+	31 => 'Default',
+	32 => 'White',
+	33 => 'Black',
+	34 => 'Purple',
+	35 => 'Navy Blue',
+	36 => 'Dark Blue',
+	37 => 'Blue',
+	38 => 'Cyan',
+	39 => 'Green',
+	40 => 'Yellow',
+	41 => 'Orange',
+	42 => 'Red',
+	43 => 'Pink',
+	44 => 'Smiley',
+	45 => 'Wink',
+	46 => 'Tongue',
+	47 => 'Grin',
+	48 => 'Sad',
+	49 => 'Angry',
+	50 => 'Crying',
+	51 => 'Lips Sealed',
+	52 => 'Undecided',
+	53 => 'Shocked',
+	54 => 'Blushing',
+	55 => 'Cool',
+	56 => 'Kissing',
+	57 => 'Money Mouth',
+	58 => 'Halo',
+	59 => 'Huh',
+	60 => 'Not Available',
+	61 => 'Normal Thread',
+	62 => 'Locked Thread',
+	63 => 'Hot Thread',
+	64 => 'Very Hot Thread',
+	65 => 'Sticky Thread',
+	66 => 'Locked Sticky Thread',
+	67 => 'Poll',
+	68 => 'Sticky Poll',
+	69 => 'Locked Poll',
+	70 => 'Switch to',
+	71 => 'Security Type',
+	72 => 'Start Threads',
+	73 => 'Reply to Threads',
+	74 => 'Polling',
+	75 => 'Maximum Member',
+	76 => 'Full Member',
+	77 => 'Senior Member',
+	78 => 'Junior Member',
+	79 => 'Newbie Member',
+	80 => 'Basic',
+	81 => 'Allowed Member Groups Only',
+	82 => 'and Guests',
+	83 => 'Members',
+	84 => 'Administrators Only',
+	85 => 'Disabled to Everyone',
+	86 => 'Insert Flash',
+	87 => 'Insert Code',
+	88 => 'Blocked Tables',
+	89 => 'Clicks',
+	90 => 'Users Browsing Forum',
+	91 => 'Guests',
+	92 => 'showing',
+	93 => 'of',
+	94 => 'Small',
+	95 => 'Large',
+	96 => 'Largest',
+	97 => 'and'
+);
+
+if($menutext == 1) { # Sepertators for disabled images (the text)
+	$Mmsp1 = '';    # Before
+	$Mmsp2 = ' | '; # Middle
+	$Mmsp3 = '';    # End
+
+	%Mimg = (
+		'profile'  => $Mmsp1."Member Center".$Mmsp3,
+		'search'   => $Mmsp1."Search".$Mmsp3,
+		'logout'   => $Mmsp1."Logout".$Mmsp3,
+		'admin'    => $Mmsp1."Admin Control Panel".$Mmsp3,
+		'cal'      => $Mmsp1."Calendar".$Mmsp3,
+		'login'    => $Mmsp1."Login".$Mmsp3,
+		'help'     => $Mmsp1."Help".$Mmsp3,
+		'home'     => $Mmsp1."Home".$Mmsp3,
+		'register' => $Mmsp1."Register".$Mmsp3
+	);
+} elsif($menutext == 2) {
+	$Mmsp2 = ' ';
+
+	%Mimg = (
+		'profile'  => qq~<img src="$buttons/icons/profile.png" class="centerimg" alt="Member Center" /> Member Center~,
+		'search'   => qq~<img src="$buttons/icons/search.png" class="centerimg" alt="Search" /> Search~,
+		'logout'   => qq~<img src="$buttons/icons/logout.png" class="centerimg" alt="Logout" /> Logout~,
+		'admin'    => qq~<img src="$buttons/icons/admin.png" class="centerimg" alt="Admin" /> Admin Center~,
+		'cal'      => qq~<img src="$buttons/icons/cal.png" class="centerimg" alt="Calendar" /> Calendar~,
+		'login'    => qq~<img src="$buttons/icons/login.png" class="centerimg" alt="Login" /> Login~,
+		'help'     => qq~<img src="$buttons/icons/help.png" class="centerimg" alt="Help" /> Help~,
+		'home'     => qq~<img src="$buttons/icons/home.png" class="centerimg" alt="Home" /> Home~,
+		'register' => qq~<img src="$buttons/icons/register.png" class="centerimg" alt="Register" /> Register~
+	);
+} else {
+	$Mmsp2 = ' ';
+
+	%Mimg = (
+		'profile'  => qq~<img src="$buttons/profile.png" alt="Member Center" />~,
+		'search'   => qq~<img src="$buttons/search.png" alt="Search" />~,
+		'logout'   => qq~<img src="$buttons/logout.png" alt="Logout" />~,
+		'admin'    => qq~<img src="$buttons/admin.png" alt="Admin" />~,
+		'cal'      => qq~<img src="$buttons/cal.png" alt="Calendar" />~,
+		'login'    => qq~<img src="$buttons/login.png" alt="Login" />~,
+		'help'     => qq~<img src="$buttons/help.png" alt="Help" />~,
+		'home'     => qq~<img src="$buttons/home.png" alt="Home" />~,
+		'register' => qq~<img src="$buttons/register.png" alt="Register" />~
+	);
+}
+
+if($posttext == 1) {
+	$Pmsp1 = '';    # Before
+	$Pmsp2 = ' | '; # Middle
+	$Pmsp3 = '';    # End
+
+	%Pimg = (
+		'msn'       => $Pmsp1."WLM".$Pmsp3,
+		'email'     => $Pmsp1."E-mail".$Pmsp3,
+		'quote'     => $Pmsp1."Quote".$Pmsp3,
+		'report'    => $Pmsp1."Report to Moderator".$Pmsp3,
+		'pm'        => $Pmsp1."Private Message".$Pmsp3,
+		'delete'    => $Pmsp1."Delete".$Pmsp3,
+		'yim'       => $Pmsp1."YIM".$Pmsp3,
+		'icq'       => $Pmsp1."ICQ".$Pmsp3,
+		'modify'    => $Pmsp1."Modify".$Pmsp3,
+		'aim'       => $Pmsp1."AIM".$Pmsp3,
+		'site'      => $Pmsp1."Site".$Pmsp3,
+		'skype'     => $Pmsp1."Skype".$Pmsp3
+	);
+} elsif($posttext == 2) {
+	$Pmsp2 = ' ';
+
+	%Pimg = (
+		'msn'       => qq~<img src="$buttons/icons/msn.png" class="centerimg" alt="Windows Live Messenger" /> WLM~,
+		'email'     => qq~<img src="$buttons/icons/email.png" class="centerimg" alt="E-mail" /> E-mail~,
+		'quote'     => qq~<img src="$buttons/icons/quote.png" class="centerimg" alt="Quote" /> Quote~,
+		'report'    => qq~<img src="$buttons/icons/report.png" class="centerimg" alt="Report to Moderator" /> Report to Moderator~,
+		'pm'        => qq~<img src="$buttons/icons/pm.png" class="centerimg" alt="Private Message" /> Private message~,
+		'delete'    => qq~<img src="$buttons/icons/delete.png" class="centerimg" alt="Delete" /> Delete~,
+		'yim'       => qq~<img src="$buttons/icons/yim.png" class="centerimg" alt="YIM" /> YIM~,
+		'icq'       => qq~<img src="$buttons/icons/icq.png" class="centerimg" alt="ICQ" /> ICQ~,
+		'modify'    => qq~<img src="$buttons/icons/modify.png" class="centerimg" alt="Modify" /> Modify~,
+		'aim'       => qq~<img src="$buttons/icons/aim.png" class="centerimg" alt="AIM" /> AIM~,
+		'site'      => qq~<img src="$buttons/icons/site.png" class="centerimg" alt="Site" /> Site~,
+		'skype'     => qq~<img src="$buttons/icons/skype.png" class="centerimg" alt="Skype" /> Skype~
+	);
+} else {
+	$Pmsp2 = ' ';
+
+	%Pimg = (
+		'msn'       => qq~<img src="$buttons/msn.png" alt="Windows Live Messenger" />~,
+		'email'     => qq~<img src="$buttons/email.png" alt="E-mail" />~,
+		'quote'     => qq~<img src="$buttons/quote.png" alt="Quote" />~,
+		'report'    => qq~<img src="$buttons/report.png" alt="Report to Moderator" />~,
+		'pm'        => qq~<img src="$buttons/pm.png" alt="Private Message" />~,
+		'delete'    => qq~<img src="$buttons/delete.png" alt="Delete" />~,
+		'yim'       => qq~<img src="$buttons/yim.png" alt="YIM" />~,
+		'icq'       => qq~<img src="$buttons/icq.png" alt="ICQ" />~,
+		'modify'    => qq~<img src="$buttons/modify.png" alt="Modify" />~,
+		'aim'       => qq~<img src="$buttons/aim.png" alt="AIM" />~,
+		'site'      => qq~<img src="$buttons/site.png" alt="Site" />~,
+		'skype'     => qq~<img src="$buttons/skype.png" alt="Skype" />~
+	);
+}
+
+if($indextext == 1) {
+	$Imsp1 = '';    # Before
+	$Imsp2 = ' | '; # Middle
+	$Imsp3 = '';    # End
+
+	%Iimg = (
+		'print'     => $Imsp1."Print Thread".$Imsp3,
+		'print_pm'  => $Imsp1."Print Private Messages".$Imsp3,
+		'remove_pm' => $Imsp1."Remove Private Messages".$Imsp3,
+		'new_pm'    => $Imsp1."New Private Messages".$Imsp3,
+		'newthread' => $Imsp1."New Thread".$Imsp3,
+		'reply'     => $Imsp1."New Reply".$Imsp3,
+		'options'   => $Imsp1."Options".$Imsp3
+	);
+} elsif($indextext == 2) {
+	$Imsp2 = ' ';
+
+	%Iimg = (
+		'print'     => qq~<img src="$buttons/icons/print_thread.png" class="centerimg" alt="Print" /> Print Thread~,
+		'print_pm'  => qq~<img src="$buttons/icons/print_pm.png" alt="Print Private Messages" /> Print Private Messages~,
+		'remove_pm' => qq~<img src="$buttons/icons/remove_pm.png" alt="Remove Private Message" /> Remove Private Message~,
+		'new_pm'    => qq~<img src="$buttons/icons/new_pm.png" alt="New Private Message" /> New Private Message~,
+		'newthread' => qq~<img src="$buttons/icons/new_thread.png" class="centerimg" alt="New Thread" /> New Thread~,
+		'reply'     => qq~<img src="$buttons/icons/new_reply.png" class="centerimg" alt="New Reply" /> New Reply~,
+		'options'   => qq~<img src="$buttons/icons/options.png" class="centerimg" alt="Options" /> Options~
+	);
+} else {
+	$Imsp2 = ' ';
+
+	%Iimg = (
+		'print'     => qq~<img src="$buttons/print_thread.png" alt="Print" />~,
+		'print_pm'  => qq~<img src="$buttons/print_pm.png" alt="Print Private Messages" />~,
+		'remove_pm' => qq~<img src="$buttons/remove_pm.png" alt="Remove Private Message" />~,
+		'new_pm'    => qq~<img src="$buttons/new_pm.png" alt="New Private Message" />~,
+		'newthread' => qq~<img src="$buttons/new_thread.png" alt="New Thread" />~,
+		'reply'     => qq~<img src="$buttons/new_reply.png" alt="New Reply" />~,
+		'options'   => qq~<img src="$buttons/options.png" alt="Options" />~
+	);
+}
+1;
