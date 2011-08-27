@@ -259,10 +259,12 @@ sub MonthView {
 	$classes = $quickview ? ' class="smalltext"' : '';
 	$specialwidth = !$quickview ? 14 : 13;
 
+	if($fulltext ne '') { $fulltext = qq~<a href="$surl\lv-cal/month-$month/year-$year/" rel="nofollow">$fulltext</a>~; }
+
 	$monthview .= <<"EOT";
 <table cellpadding="5" cellspacing="1" class="border" width="100%">
  <tr>
-  <td class="titlebg" colspan="8"><div style="float: left"$classes><strong>$months[$month-1] $year</strong></div><div style="float: right"$classes>$fulltext</div></td>
+  <td class="titlebg" colspan="8"><div style="float: left"$classes><strong><a href="$surl\lv-cal/month-$month/year-$year/" rel="nofollow">$months[$month-1] $year</a></strong></div><div style="float: right"$classes>$fulltext</div></td>
  </tr><tr>
   <td class="catbg">&nbsp;</td>
 EOT

@@ -204,7 +204,9 @@ EOT
 		$ebout .= <<"EOT";
 <script type="text/javascript">
 //<![CDATA[
-	setTimeout('document.location.href = "#num$latestmessage"',150);
+window.onload = function() {
+	document.location.href = '#num$latestmessage';
+}
 //]]>
 </script>		
 <table cellpadding="3" cellspacing="1" class="border" width="100%">
@@ -419,7 +421,9 @@ EOT
 		if(!$guest) { $usericon = qq~<img src="$images/$usericon.png" class="centerimg" alt="" /> ~; }
 			else { $usericon = ''; }
 
-		$email = $guest ? qq~<a href="mailto:$email">$Pimg{'email'}</a>~ : $email{$user};
+		if($guest && $members{'Administrator',$username}) { $email = qq~<a href="mailto:$email">$Pimg{'email'}</a>~; }
+		elsif($guest) { $email = ''; }
+			else { $email = $email{$user}; }
 		$email .= $pmdisable || $guest ? '' : qq~<a href="$surl\lv-memberpanel/t-$user/a-pm/s-write/">$Pimg{'pm'}</a>~;
 
 		$modify = !$mlocked && (($members{'Administrator',$username} || $ismod || $modifyon) || $username eq $user && (!$modifytime || $fdate+($modifytime*3600) > time)) ? qq~$Pmsp2<a href="javascript:clear('$counter')">$Pimg{'delete'}</a>$Pmsp2<a href="$surl\lv-post/b-$URL{'b'}/a-modify/m-$messid/n-$counter/" onmouseover="CreateMenus(this,25,'$counter'); outtimer = setTimeout('ClearMenu()',2000);">$Pimg{'modify'}</a>~ : '';

@@ -900,14 +900,14 @@ sub PostTopic {
 		@stopwords = <FILE>;
 		fclose(FILE);
 		chomp @stopwords;
-		foreach(@stopwords) { $stopword{$_} = 1; }
+		foreach(@stopwords) { $stopword{lc($_)} = 1; }
 
 		$tagslength = '';
 		foreach $testtag (split(' ',$message)) {
 			$testtag = lc($testtag);
 			if($testtag =~ /\A[0-9A-Za-z\'\-_]+\Z/ && !$stopword{$testtag}) {
 				++$enabletag{$testtag};
-				$test .= ($enabletag{$testtag}.$testtag."\n");
+
 				if($enabletag{$testtag} >= $autotag) {
 					$tags .= $testtag.', ';
 					$tagslength += length($testtag);

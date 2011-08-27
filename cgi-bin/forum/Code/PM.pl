@@ -169,8 +169,9 @@ EOT
      <td class="catbg center" style="width: 30px"><input type="checkbox" name="del" onclick="checkAll();" /></td>
     </tr>
 EOT
+
 	if(@pmz > 0) {
-		for($c = 0; $c < $maxm; $c++) {
+		for($c = 0; $c < $maxm+1; $c++) {
 			if($c >= $tstart && $c < $end) { push(@pmlist,$pmz[$c]); }
 		}
 		$counter = $tstart;

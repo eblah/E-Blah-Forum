@@ -410,7 +410,7 @@ $endform
 </div>
 <br />
 
-<table cellpadding="6" cellspacing="1" style="float: left; margin: 0px;">
+<table cellpadding="6" cellspacing="1" style="float: left; margin: 0px;" id="threadtypes">
  <tr>
   <td class="center" style="width: 15px"><img src="$images/thread.png" alt="" /></td>
   <td class="smalltext">$var{'61'}</td>

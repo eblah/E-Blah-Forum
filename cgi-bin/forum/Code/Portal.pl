@@ -328,6 +328,7 @@ EOT
 	@modules = ();
 	foreach(@modules2) {
 		$_ =~ s/.pl//g;
+		if($_ eq '.' || $_ eq '..') { next; }
 		eval { require("$modsdir/Modules/$_.pl"); };
 		if($@ || $installed{$_}) { $@ = ''; next; }
 		$filename = $_;
@@ -620,7 +621,7 @@ sub RSSLatestThreads {
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	>
  <channel>
-  <title>$mbname</title>
+  <title><![CDATA[$mbname]]></title>
   <link>$rurl</link>
   <generator>http://www.eblah.com</generator>
   <description></description>
@@ -695,7 +696,7 @@ EOT
 
 		print <<"EOT";
   <item>
-   <title>$title</title>
+   <title><![CDATA[$title]]></title>
    <link>$rurl\lm-$id/</link>
    <comments>$rurl\lm-$id/#num1</comments>
    <description><![CDATA[$message]]></description>
@@ -856,7 +857,7 @@ sub Shownews {
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	>
  <channel>
-  <title>$title</title>
+  <title><![CDATA[$mbname]]></title>
   <link>$rurl</link>
   <generator>http://www.eblah.com</generator>
   <description></description>
@@ -949,7 +950,7 @@ EOT
 
 			$shownewstemp .= <<"EOT";
   <item>
-   <title>$messtitle</title>
+   <title><![CDATA[$messtitle]]></title>
    <link>$totalurl</link>
    <comments>$totalurl#num1</comments>
    <description><![CDATA[$message]]></description>
@@ -1016,7 +1017,7 @@ sub Online {
 <?xml version="1.0" encoding="$char"?>
 <rss version="2.0">
  <channel>
-  <title>$mbname</title>
+  <title><![CDATA[$mbname]]></title>
   <link>$rurl</link>
   <generator>http://www.eblah.com</generator>
   <description></description>
@@ -1043,7 +1044,7 @@ EOT
 
 		print <<"EOT";
   <item>
-   <title>$user</title>
+   <title><![CDATA[$user]]></title>
    <link>$url</link>
    <type>$type</type>
    <time>$sdays[$wday], $day $smonths[$month-1] $year $h:$m:$s</time>

@@ -10,7 +10,7 @@ use Storable;
 eval { %taghash = %{ retrieve("$prefs/Tags.txt") }; };
 
 sub Tags {
-	my($name,$value,$indtags,%tagcount,@taglist,@taglistsort,$totaltags,$tag);
+	my($name, $value, $indtags, %tagcount, @taglist, @taglistsort, $totaltags, $tag);
 
 	if($URL{'find'} || $URL{'search'}) { SearchTags(); }
 
@@ -41,13 +41,30 @@ sub Tags {
 EOT
 
 	@taglist = ();
+	$maxshown = 200;
 
+	$counting = 0;
 	foreach(sort {$b <=> $a} @taglistsort) {
 		($count,$tag) = split(/\|/,$_);
+		if($tag eq 'i') { next; } # This is annoying
 		push(@taglist,"$tag|$count");
 		++$counting;
-		if($counting > 100) { last; }
+		if($counting > $maxshown) { last; }
 	}
+
+	# We're going to use this:
+	# http://prism-perfect.net/archive/php-tag-cloud-tutorial/
+	# Many tag clouds use a CSS class and limit the sizes to a few -- this method is much better as you get many different text sizes
+
+	$max_size = 100;
+	$min_size = 75;
+
+	# Array max/min
+	$max_qty = $taglistsort[0];
+	$min_qty = $taglistsort[-1];
+
+	$spread = ($max_qty - $min_qty) || 1;
+	$step = (($max_size - $min_size) / $spread);
 
 	foreach(sort {$a cmp $b} @taglist) {
 		($tag,$count) = split(/\|/,$_);
@@ -56,14 +73,12 @@ EOT
 		$enc =~ s/\%2D/\*/g;
 		$tag = CensorList($tag);
 
-		if(($count/$totaltags) <= 1 && ($count/$totaltags) > .8) { $level = "5"; }
-		elsif(($count/$totaltags) <= .8 && ($count/$totaltags) > .6) { $level = "4"; }
-		elsif(($count/$totaltags) <= .6 && ($count/$totaltags) > .4) { $level = "3"; }
-		elsif(($count/$totaltags) <= .4 && ($count/$totaltags) > .2) { $level = "2"; }
-		elsif(($count/$totaltags) <= .2 && ($count/$totaltags) > 0) { $level = "1"; }
+		$size = ($min_size + (($count - $min_qty) * $step));
+
+		#if($size > $max_size) { $size = $max_size; }
 
 		$ebout .= <<"EOT";
-    <a href="$surl\lv-tags/find-$enc/" class="tag$level">$tag</a> &nbsp; 
+    <a href="$surl\lv-tags/find-$enc/" style="font-size: $size%" title="$count posts tagged">$tag</a> &nbsp; 
 EOT
 	}
 

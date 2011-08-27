@@ -648,7 +648,7 @@ sub CreateGroups { # Member Groups (Version 2.2)
 
 sub SaveMemberID {
 	my($userid) = $_[0];
-	my($iddata,$item,$itemvalue,@printuser,$hasdat,$failsafe);
+	my($iddata,$item,$itemvalue,@printuser,$hasdat,$failsafe, $size);
 
 	if($userid eq '') { return(0); }
 
@@ -670,6 +670,9 @@ sub SaveMemberID {
 	}
 
 	if($failsafe != 1) { return(); }
+
+	$size = @printuser;
+	if($size <= 0) { return(); }
 
 	fopen(SAVEMEMBERID,"+>$members/$userid.dat");
 	foreach(@printuser) { print SAVEMEMBERID "$_\n"; }
