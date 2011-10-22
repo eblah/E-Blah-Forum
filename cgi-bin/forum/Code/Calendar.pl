@@ -507,7 +507,7 @@ sub OtherOptions {
 	for($x = 1; $x <= 12; ++$x) { $current .= qq~<option value="$x"$sel{$x}>$months[$x-1]</option>\n~; }
 	for($ye = -2; $ye < 3; $ye++) {
 		$curyr = $year+$ye;
-		if($curyr < 1995 || $curyr > 2015) { next; }
+		if($curyr < 2000 || $curyr > 2050) { next; }
 		$yearzz .= qq~<option value="$curyr"$yrs{$curyr}>$curyr</option>~;
 	}
 
