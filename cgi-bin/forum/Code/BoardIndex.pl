@@ -7,7 +7,7 @@
 CoreLoad('BoardIndex',1);
 
 sub Glimpse { # Taken from latest threads in Portal
-	my($lastthread,$tmpcnt);
+	my($lastthread,$tmpcnt, $posted_sn);
 	$tmpcnt = $glimpsecnt+1;
 
 	if($URL{'a'} eq 'feed') {
@@ -77,14 +77,21 @@ EOT
 		}
 
 		$status = FindStatus;
-		GetMemberID($lastuser);
 		GetMemberID($posted);
-		if($lastuser eq '') { $lastuser = $posted; }
-			else { $lastuser = $memberid{$lastuser}{'sn'} ne '' ? $userurl{$lastuser} : $lastuser; }
+		$posted_sn = $memberid{$posted}{'sn'} ne '' ? $memberid{$posted}{'sn'} : FindOldMemberName($posted);
+		if($lastuser eq '') {
+			$lastuser = $posted;
+		} else {
+			GetMemberID($lastuser);
+		}
+		$lastuser = $memberid{$lastuser}{'sn'} ne '' ? $userurl{$lastuser} : FindOldMemberName($lastuser);
 		$title = CensorList($title);
 		$date = get_date($date);
 
-		if($counter3 == 2) { $lastthread .= " </tr><tr>\n"; $counter3 = 0; }
+		if($counter3 == 2) {
+			$lastthread .= " </tr><tr>\n";
+			$counter3 = 0;
+		}
 
 		if($URL{'a'} eq 'feed') {
 			($s,$m,$h,$day,$month,$year,$wday) = localtime($id);
@@ -100,13 +107,13 @@ EOT
    <link>$rurl\lm-$id/$snew</link>
    <comments>$rurl\lm-$id/#num1</comments>
    <pubDate>$sdays[$wday], $day $smonths[$month-1] $year $h:$m:$s</pubDate>
-   <dc:creator>$memberid{$posted}{'sn'}</dc:creator>
+   <dc:creator>$posted</dc:creator>
   </item>
 EOT
 		} else {
 			$lastthread .= <<"EOT";
   <td class="win center" style="vertical-align: top;"><div style="padding: 11px; padding-top: 4px;"><img src="$images/$status.png" alt="" /></div></td>
-  <td class="win2" style="width: 50%">$new<a href="$surl\lm-$id/$snew" title="$gtxt{'19'} $memberid{$posted}{'sn'}">$title</a>$newend<div class="smalltext">$gtxt{'46'} $lastuser<div class="bidate">$date</div></div></td>
+  <td class="win2" style="width: 50%">$new<a href="$surl\lm-$id/$snew" title="$gtxt{'19'} $posted_sn">$title</a>$newend<div class="smalltext">$gtxt{'46'} $lastuser<div class="bidate">$date</div></div></td>
 EOT
 		}
 		++$counter;
