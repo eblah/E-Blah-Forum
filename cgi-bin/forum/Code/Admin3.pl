@@ -550,7 +550,8 @@ sub Mailing {
 	chomp @mlist;
 	foreach(@mlist) {
 		GetMemberID($_);
-		if($memberid{$_}{'ml'}) { next; }
+		if($memberid{$_}{'ml'} || $memberid{$_}{'status'} eq 'DISABLE') { next; }
+
 		++$counter;
 		$total .= qq~<option value="$_" id="u_$_">$memberid{$_}{'sn'}</option>~;
 		$allusers .= "u_$_,";
