@@ -61,13 +61,15 @@ EOT
   <td class="win" style="padding: 0px">
    <table cellpadding="8" cellspacing="0" width="100%">
     <tr>
-     <td class="win2" style="width: 50%"><strong>$searchtxt[57]</strong></td>
-     <td class="win2" style="width: 50%"><strong>$searchtxt[58]</strong></td>
+     <td class="win2"><strong>$searchtxt[58]</strong></td>
     </tr><tr>
-     <td>$searchtxt[59] <input type="text" name="searchdate" value="90" size="4" maxlength="4" /> $searchtxt[60] <select name="searcholder"><option value="0">$searchtxt[40]</option><option value="1" selected="selected">$searchtxt[41]</option></select></td>
-     <td><select name="searchresults"><option value="5">5</option><option value="10">10</option><option value="15">15</option><option value="20" selected="selected">20</option><option value="25">25</option><option value="30">30</option></select> $searchtxt[61]</td>
+     <td>
+     	<input type="hidden" name="searchdate" value="0" />
+     	<input type="hidden" name="searcholder" value="0" />
+     	<select name="searchresults"><option value="5">5</option><option value="10">10</option><option value="15">15</option><option value="20" selected="selected">20</option><option value="25">25</option><option value="30">30</option></select> $searchtxt[61]
+     </td>
     </tr><tr>
-     <td colspan="2">$searchtxt[62] <select name="searchnm"><option value="1">$searchtxt[63]</option><option value="0" selected="selected">$searchtxt[64]</option></select></td>
+     <td>$searchtxt[62] <select name="searchnm"><option value="1">$searchtxt[63]</option><option value="0" selected="selected">$searchtxt[64]</option></select></td>
     </tr>
    </table>
   </td>
