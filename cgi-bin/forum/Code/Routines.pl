@@ -36,7 +36,7 @@ require("$language/Routines.lng");
 		'mediapartners-google<>' => 'AdSense',
 		'googlebot<>'            => 'Googlebot',
 		'slurp<>'                => 'Yahoo! Bot',
-		'msnbot<>'               => 'MSN Bot',
+		'msnbot<>'               => 'Bing Bot',
 		'inktomi<>'              => 'Hot Bot',
 		'ask jeeves<>'           => 'Ask.com',
 		'lycos<>'                => 'Lycos',
