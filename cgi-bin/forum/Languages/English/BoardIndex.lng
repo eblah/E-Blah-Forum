@@ -55,4 +55,5 @@ $boardindex[101] = 'Subcategories';
 $boardindex[102] = 'Mark forum as read';
 $boardindex[103] = 'Last visit unread';
 $boardindex[104] = 'Latest Forum Activity';
+$boardindex[105] = 'from the';
 1;
