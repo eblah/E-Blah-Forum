@@ -111,9 +111,14 @@ EOT
   </item>
 EOT
 		} else {
+			$mydesc='';
+			foreach (@boardbase) {
+				($bid,$bdisc[0],$bdisc[1],$bdisc[2],$bdisc[3],$bdisc[4],$bdisc[5],$bdisc[6]) = split("/",$_);
+				if($bid eq $board) { $mydesc=$bdisc[2] }
+			}
 			$lastthread .= <<"EOT";
   <td class="win center" style="vertical-align: top;"><div style="padding: 11px; padding-top: 4px;"><img src="$images/$status.png" alt="" /></div></td>
-  <td class="win2" style="width: 50%">$new<a href="$surl\lm-$id/$snew" title="$gtxt{'19'} $posted_sn">$title</a>$newend<div class="smalltext">$gtxt{'46'} $lastuser<div class="bidate">$date</div></div></td>
+  <td class="win2" style="width: 50%">$new<a href="$surl\lm-$id/$snew" title="$gtxt{'19'} $posted_sn">$title</a>$newend<div class="smalltext">$gtxt{'46'} $lastuser<div class="bidate">$date $boardindex[105] <a href="$surl\lb-$board" title="$mydesc">$mydesc</a></div></div></td>
 EOT
 		}
 		++$counter;
