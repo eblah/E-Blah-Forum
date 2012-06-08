@@ -750,6 +750,9 @@ EOT
 		print MAIL "X-Username: $username\n";
 		print MAIL "X-Sent-From-IP: $ENV{'REMOTE_ADDR'}\n";
 		print MAIL "To: $to\n";
+		use POSIX qw(strftime);
+		$myMailDate=strftime("%a, %d %b %Y %H:%M:%S %z", localtime(time())) . "\n";
+		print MAIL "Date: $myMailDate";
 		print MAIL "From: \"$regto\" <$eadmin>\n";
 		print MAIL "Subject: $subject\n\n";
 		print MAIL "$wholemessage";
@@ -762,6 +765,9 @@ EOT
 			$smtp->auth($mailusername,$mailpassword) if($mailauth);
 			$smtp->mail($eadmin);
 			$smtp->to($to);
+			use POSIX qw(strftime);
+			$myMailDate=strftime("%a, %d %b %Y %H:%M:%S %z", localtime(time())) . "\n";
+			$smtp->datasend("Date: $myMailDate\n");
 			$smtp->data();
 			$smtp->datasend("MIME-Version: 1.0\n");
 			$smtp->datasend("Content-Type: text/html; charset=$char\n");
