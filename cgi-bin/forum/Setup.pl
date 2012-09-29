@@ -1,18 +1,18 @@
 #!/usr/bin/perl
 
 ############################################################
-# E-Blah Bulletin Board Systems                       2008 #
+# E-Blah Bulletin Board Systems                       2012 #
 ############################################################
 # Software Version : E-Blah Setup -- Version 4             #
 # Setup Project    : May 2005 by Justin <justin@eblah.com> #
 # Distrobuted by   : http://www.eblah.com                  #
 # License          : http://www.eblah.com/license.php      #
 ############################################################
-# Copyright (c) 2005 - 2008 E-Blah                         #
+# Copyright (c) 2005 - 2012 E-Blah                         #
 ############################################################
 
 # Global version information:
-$versionnum  = '10.3.6';                      # For the upgrade ...
+$versionnum  = '10.3.7';                      # For the upgrade ...
 $eblahsetupv = $coreversion = 2;
 $version     = 'E-Blah '.$versionnum;
 $scriptname  = 'Setup.pl';
