@@ -1350,10 +1350,10 @@ sub Settings3 {
 
 	# Create a random captcha salt
 	if(!$captcha_random) {
-		$possible = '123456789ABCDFGJL^(@&!)(*^)(#*_!=MNPQRSTWXY23456789';
+		$possible = '123456789abcdefghijklmnopqrstuvwxyzABCDFGJL^(@&!)(*^)(#*_!=MNPQRSTWXY23456789';
 		$temp1 = 0;
 		$captcha_random = '';
-		while($temp1 < 6) { $captcha_random .= substr($possible, int(rand(length($possible))), 1); ++$temp1; }
+		while($temp1 < 20) { $captcha_random .= substr($possible, int(rand(length($possible))), 1); ++$temp1; }
 	}
 
 	$printtofile = <<"EOT";
