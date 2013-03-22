@@ -1348,6 +1348,14 @@ sub Settings3 {
 
 	if(!$advancedhtml) { $advancedhtml = 0; }
 
+	# Create a random captcha salt
+	if(!$captcha_random) {
+		$possible = '123456789ABCDFGJL^(@&!)(*^)(#*_!=MNPQRSTWXY23456789';
+		$temp1 = 0;
+		$captcha_random = '';
+		while($temp1 < 6) { $captcha_random .= substr($possible, int(rand(length($possible))), 1); ++$temp1; }
+	}
+
 	$printtofile = <<"EOT";
 #####################################################
 # E-Blah Bulletin Board Systems               2008  #
@@ -1519,6 +1527,7 @@ sub Settings3 {
 \$BCAdvanced = $BCAdvanced;
 \$tagsenable = $tagsenable;
 \$autotag = $autotag;
+\$captcha_random = "$captcha_random";
 1;
 EOT
 

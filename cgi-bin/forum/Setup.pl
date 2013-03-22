@@ -1287,6 +1287,11 @@ sub Step2 {
 		fclose(FILE);
 	}
 
+	$possible = '123456789ABCDFGJL^(@&!)(*^)(#*_!=MNPQRSTWXY23456789';
+	$temp1 = 0;
+	$captcha_random = '';
+	while($temp1 < 6) { $captcha_random .= substr($possible, int(rand(length($possible))), 1); ++$temp1; }
+
 	fopen(SETTINGS,">$root/Settings.pl");
 	$savesettings = <<"EOT";
 ####################################################
@@ -1385,6 +1390,7 @@ sub Step2 {
 \$indextext = 0;
 \$posttext = 0;
 \$gdisable = 1;
+\$captcha_random = "$captcha_random";
 EOT
 	$savesettings =~ s~\\~/~sig; # Get rid of {x}:\ with Win32 systems
 	print SETTINGS $savesettings;

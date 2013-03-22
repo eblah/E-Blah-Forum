@@ -170,7 +170,7 @@ EOT
 
 		require Digest::MD5;
 		import Digest::MD5 qw(md5_hex);
-		$datad = md5_hex($image->random_str());
+		$datad = md5_hex($captcha_random . $image->random_str());
 
 		$image->create(ttf,rect);
 		$badimage = '<br />'.$@ if($image->gdbox_empty());
@@ -305,7 +305,7 @@ sub Register3 {
 	if($nocomputers) {
 		require Digest::MD5;
 		import Digest::MD5 qw(md5_hex);
-		$datad = md5_hex(uc($FORM{'random'}));
+		$datad = md5_hex($captcha_random . uc($FORM{'random'}));
 		error_reg($registertxt[71]) if($datad ne $FORM{'randomconfirm'} || !-e("$bdocsdir2/Random/$datad.png"));
 		unlink("$bdocsdir2/Random/$datad.png","$bdocsdir2/Random/$FORM{'randomconfirm'}.png");
 	}
