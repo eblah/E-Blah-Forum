@@ -1,9 +1,9 @@
 #!/usr/bin/perl
 
 ############################################################
-# E-Blah Bulletin Board Systems           27 December 2007 #
+# E-Blah Bulletin Board Systems          29 September 2012 #
 ############################################################
-# Software Version: 10.3.6                                 #
+# Software Version: 10.3.7                                 #
 # Project started : December 2001 by Justin                #
 # Distributed by  : http://www.eblah.com                   #
 # License         : http://www.eblah.com/license.php       #
@@ -18,13 +18,13 @@
 # PARTICULAR PURPOSE.  See the GNU General Public License  #
 # for more details.                                        #
 ############################################################
-# Copyright (c) 2001 - 2008 E-Blah.                        #
+# Copyright (c) 2001 - 2012 E-Blah.                        #
 ############################################################
 use CGI::Carp fatalsToBrowser;
 
 # Global information:
 $theblahver  = 16;
-$version     = $versioncr = '10.3.6'; # Said Version; Copyright version
+$version     = $versioncr = '10.3.7'; # Said Version; Copyright version
 
 # Uncomment this for better time precision
 #use Time::HiRes qw(time);

@@ -36,7 +36,7 @@ require("$language/Routines.lng");
 		'mediapartners-google<>' => 'AdSense',
 		'googlebot<>'            => 'Googlebot',
 		'slurp<>'                => 'Yahoo! Bot',
-		'msnbot<>'               => 'MSN Bot',
+		'msnbot<>'               => 'Bing Bot',
 		'inktomi<>'              => 'Hot Bot',
 		'ask jeeves<>'           => 'Ask.com',
 		'lycos<>'                => 'Lycos',
@@ -515,7 +515,7 @@ sub BCSmileys {
 	while($smilecnt < $gmaxsmils && $tempsmile =~ s~\Q;-D\E~<img src="$simages/grin.png" style="vertical-align: middle" alt="" />~) { ++$smilecnt; }
 	while($smilecnt < $gmaxsmils && $tempsmile =~ s~\Q8)\E~<img src="$simages/cool.png" style="vertical-align: middle" alt="" />~) { ++$smilecnt; }
 	while($smilecnt < $gmaxsmils && $tempsmile =~ s~\Q:P\E~<img src="$simages/tongue.png" style="vertical-align: middle" alt="" />~) { ++$smilecnt; }
-	while($smilecnt < $gmaxsmils && $tempsmile =~ s~\Q\&gt;:(\E~<img src="$simages/angry.png" style="vertical-align: middle" alt="" />~) { ++$smilecnt; }
+	while($smilecnt < $gmaxsmils && $tempsmile =~ s~\Q&gt;:(\E~<img src="$simages/angry.png" style="vertical-align: middle" alt="" />~) { ++$smilecnt; }
 	while($smilecnt < $gmaxsmils && $tempsmile =~ s~\Q:-/\E~<img src="$simages/undecided.png" style="vertical-align: middle" alt="" />~) { ++$smilecnt; }
 	while($smilecnt < $gmaxsmils && $tempsmile =~ s~\Q:(\E~<img src="$simages/sad.png" style="vertical-align: middle" alt="" />~) { ++$smilecnt; }
 	while($smilecnt < $gmaxsmils && $tempsmile =~ s~\Q:-(\E~<img src="$simages/sad.png" style="vertical-align: middle" alt="" />~) { ++$smilecnt; }
